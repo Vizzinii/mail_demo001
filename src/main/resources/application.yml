@@ -3,3 +3,10 @@ spring:
     username: 1743769392@qq.com
     password: qhutkalkqttuccgg
     host: smtp.qq.com
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/csvswitch?serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=true
+    username: root
+    password: Lhj121522581717

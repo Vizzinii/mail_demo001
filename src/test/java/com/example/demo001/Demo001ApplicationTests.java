@@ -24,14 +24,14 @@ class Demo001ApplicationTests {
 	private String from = "1743769392@qq.com";    //发件人
 	private String to = "jerry_test@sohu.com";      //收件人
 	private String subject = "This is a test Mail"; //标题
-	private String context = "Hello,Java Mail"; //正文
+	private String message = "Hello,Java Mail"; //正文
 	
 
 	@Test
 	public void testSendSimpleMail() {
 		SimpleMailMessage mail = new SimpleMailMessage();   //简单邮件
 		mail.setSubject(subject);
-		mail.setText(context);
+		mail.setText(message);
 		mail.setFrom(from);
 		mail.setTo(to);
 		sender.send(mail);  //发送邮件
@@ -43,7 +43,7 @@ class Demo001ApplicationTests {
 		MimeMessage mail = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(mail,true);
 		helper.setSubject(subject);
-		helper.setText(context+"<img src=''/>",true);
+		helper.setText(message+"<img src=''/>",true);
 		helper.setFrom(from);
 		helper.setTo(to);
 		File file = new File("");
